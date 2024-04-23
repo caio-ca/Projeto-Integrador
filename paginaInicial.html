@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/fontawesome.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/paginaInicial.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+    <div class="search">
+      <input type="text" placeholder="Pesquisar restaurante...">
+      <button type="submit">Pesquisar</button>
+    </div>
+    <div class="user-actions">
+      <button id="loginBtn">Login</button>
+      <button id="signupBtn">Cadastre-se</button>
+    </div>
+  </header>
+
+  <!-- Formulário de Login -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Login</h2>
+      <form>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Senha" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Formulário de Cadastro -->
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Cadastre-se</h2>
+      <form>
+        <input type="text" placeholder="Nome" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Senha" required>
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <!-- Cards na fileira superior -->
+    <div class="card">
+      <img src="images.jpg" alt="">
+      <div>
+        <h3>Burguer</h3>
+        <button><a href="index.html">Saiba Mais</a></button>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="Untitled.png" alt="">
+      <div>
+        <h3>Burguer</h3>
+        <button><a href="index.html">Saiba Mais</a></button>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="Untitled (1).png" alt="">
+      <div>
+        <h3>Burguer</h3>
+        <button><a href="index.html">Saiba Mais</a></button>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="Untitled (2).png" alt="">
+      <div>
+        <h3>Novo Burguer</h3>
+        <button><a href="index.html">Saiba Mais</a></button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Nova fileira de cards -->
+  <div class="card-container">
+    <!-- Quatro novos cards alinhados no centro horizontalmente -->
+    <div class="card">
+      <img src="Untitled (3).png" alt="">
+      <div>
+        <h3>Novo Item 1</h3>
+        <button><a href="index.html">Saiba Mais</a></button>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="Untitled (4).png" alt="">
+      <div>
+        <h3>Novo Item 2</h3>
+        <button><a href="index.html">Saiba Mais</a></button>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="Untitled (7).png" alt="">
+      <div>
+        <h3>Novo Item 3</h3>
+        <button><a href="index.html">Saiba Mais</a></button>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="Untitled (5).png" alt="">
+      <div>
+        <h3>Novo Item 4</h3>
+        <button><a href="index.html">Saiba Mais</a></button>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <script>
+    // Fechar modais ao clicar no botão de fechar (x)
+    var closeBtns = document.getElementsByClassName("close");
+    for (var i = 0; i < closeBtns.length; i++) {
+      closeBtns[i].onclick = function() {
+        this.parentElement.parentElement.style.display = "none";
+      };
+    }
+
+    // Abre o modal de login ao clicar no botão de login
+    document.getElementById("loginBtn").onclick = function() {
+      document.getElementById("loginModal").style.display = "block";
+    };
+
+    // Abre o modal de cadastro ao clicar no botão de cadastro
+    document.getElementById("signupBtn").onclick = function() {
+      document.getElementById("signupModal").style.display = "block";
+    };
+  </script>
+</body>
+</html>
